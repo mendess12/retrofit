@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="regular_16sp" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+        <item name="android:padding">@dimen/padding_8dp</item>
+        <item name="android:textColor">@color/body_color</item>
+    </style>
+
+    <style name="regular_20sp" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_20sp</item>
+        <item name="android:padding">@dimen/padding_4dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="regular_24sp" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_24sp</item>
+        <item name="android:padding">@dimen/padding_8dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+</resources>
