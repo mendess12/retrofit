@@ -35,18 +35,17 @@ class ListFragment : Fragment() {
         linearLayoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.layoutManager = linearLayoutManager
         observeLiveData()
+        viewModel.getData()
     }
 
     private fun observeLiveData() {
         viewModel.dataList.observe(viewLifecycleOwner) {
             if (it != null) {
                 dataAdapter = DataAdapter(it)
-                dataAdapter.notifyDataSetChanged()
                 binding.recyclerView.adapter = dataAdapter
             } else {
                 Toast.makeText(requireContext(), "Livedata is null", Toast.LENGTH_LONG).show()
             }
         }
-        viewModel.getData()
     }
 }
