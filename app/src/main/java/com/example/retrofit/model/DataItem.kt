@@ -11,4 +11,6 @@ data class DataItem(
     val title: String,
     @SerializedName("userId")
     val userId: Int
-)
+){
+    var expandable : Boolean = false
+}
