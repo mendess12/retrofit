@@ -1,18 +1,16 @@
 package com.example.retrofit.repository
 
-import androidx.lifecycle.MutableLiveData
 import com.example.retrofit.di.NetworkModule
 import com.example.retrofit.model.DataItem
-import retrofit2.Call
-import retrofit2.Callback
 import retrofit2.Response
 
 class DataRepository {
 
     private val networkModule = NetworkModule()
 
+    /*
     fun getRetrofitData(dataList: MutableLiveData<List<DataItem>>) {
-        networkModule.retrofitData.enqueue(
+        networkModule.retrofitData().enqueue(
             object : Callback<List<DataItem>> {
                 override fun onResponse(
                     call: Call<List<DataItem>>,
@@ -28,4 +26,7 @@ class DataRepository {
             }
         )
     }
+
+     */
+    suspend fun getRetrofitData(): Response<List<DataItem>> = networkModule.retrofitData()
 }
